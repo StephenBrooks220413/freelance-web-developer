@@ -1,0 +1,33 @@
+{
+  "name": "freelance-web-developer-instructor",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "connect-flash": "^0.1.1",
+    "debug": "~2.6.9",
+    "dotenv": "^6.1.0",
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "express-openid-connect": "^2.0.0",
+    "express-fileupload": "^1.2.1",
+    "express-layouts": "^1.0.0",
+    "express-session": "^1.17.2",
+    "layout": "^2.2.0",
+    "mongodb": "^4.3.1",
+    "mongoose": "^6.1.7",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0"
+  },
+  "description": "This sample demonstrates authentication for an Express Node.js app. The sample quickly shows how to log in, log out, and view profile information of the logged-in user.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,110 @@
+<%- include('partials/header') -%>
+
+<div class="text-center mt-3 jumbotron">
+    <% if (locals.isAuthenticated) { %>
+        <p>You are logged in. <a href="/profile" class="underline">View your profile</a>.</p>
+    <% } else { %>
+        <p>You are not logged in. <a href="/login" class="underline">Login</a>.</p>
+    <% } %>
+</div>
+
+<div class="mt-2 mb-5">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-md-6 col-lg-6 col-sm-12 p-3 mb-2">
+                <div class="p-5">
+                    <h1 class="display-2 animate__animated animate__fadeInLeft">
+                        <strong>Find Your Professional</strong>
+                    </h1>
+                    <h1 class="display-6 fw-bold text-info animate__animated animate__fadeInUp">
+                        Web Developer Here
+                    </h1>
+                    <a href="mailto:stephenbrooks714@gmail.com" class="btn btn-outline-darl btn-lg">Message Me</a>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 p-3 mb-2">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <defs>
+                        <clipPath id="shape">
+                            <path id="blob" text="hello" d="M474.5,289Q465,328,453,369Q441,410,393.5,413Q346,416,317.5,444Q289,472,255.5,440.5Q222,409,190.5,408.5Q159,408,112.5,406Q66,404,47.5,367Q29,330,49,290Q69,250,67,216.5Q65,183,75,147.5Q85,112,124,105.5Q163,99,188.5,71.5Q214,44,249,52Q284,60,324.5,55Q365,50,367.5,99.5Q370,149,420,159.5Q470,170,477,210Q484,250,474.5,289Z" fill="#d1d8e0"></path>
+                        </clipPath>
+                    </defs>
+                    <image x="0" y="0" width="100%" height="100%" clip-path="url(#shape)" xlink:href="https://cdn.shopify.com/s/files/1/0306/6419/6141/articles/coding_languages_1024x.png?v=1619126283" preserveAspectRatio="none"></image>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="angled-css">
+        <div class="container-fluid">
+            <div class="row mt-2 text-center mb-3">
+                <div class="col-md mb-3 text-black">
+                    <h4 class="text-white">Blog Post</h4>
+                    <% for(var i = 0; i < blogpost.length; i++){ %>
+                        <div class="m-3 card p-2">
+                            <a href="/post/<%= blogpost[i]._id %>">
+                                <img src="<%= blogpost[i].image %>"
+                                     class="img-thumbnail" alt="<%= blogpost[i].title %>">
+                            </a>
+                            <p>
+                                <strong>Recent Post</strong> <br />
+                                Posted On <%= blogpost[i].datePosted.toDateString() %>
+                            </p>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="col-md mb-3">
+                    <h4>Recent Courses</h4>
+                    <% for(var x = 0; x < course.length; x++){ %>
+                        <div class="m-3 text-dark card p-2">
+                            <a href="/course/<%= course[x]._id %>">
+                                <img src="<%= course[x].image %>"
+                                     class="img-fluid max-img" alt="<%= course[x].title %>">
+                            </a>
+                            <p>
+                                <strong>Recent Post</strong> <br />
+                                Posted On <%= course[x].datePosted.toDateString() %>
+                            </p>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="col-md mb-3">
+                    <h4>Web Templates</h4>
+                    <div class="card text-dark p-3">
+                        <a href="/catalog">
+                            <img src="/img/template.png" class="img-fluid max-img" alt="blogs">
+                        </a>
+                        <hr>
+                        <p>
+                            Buy a web template.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md p-5 mb-3">
+                <h1>Stephen Brooks</h1>
+                <p class="lead">
+                    Web Developer experienced in Node & MongoDB. Also worked
+                    with frameworks that included React & Material-UI
+                </p>
+                <a href="/gallery" class="btn btn-outline-primary">Gallery</a>
+            </div>
+            <div class="col-md p-5 mb-3">
+                <img src="https://media.istockphoto.com/photos/adaptive-and-responsive-web-design-concept-showing-sample-website-on-picture-id1301151581?b=1&k=20&m=1301151581&s=170667a&w=0&h=zYikz0ajSyA3ZR7h5vbjuLkVwe_efU50t7qCwnEObjE="
+                     class="img-fluid shadow-strong-2 rounded"
+                     alt="">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <%- include('partials/footer') -%>
+
+<%- include('partials/scripts') -%>

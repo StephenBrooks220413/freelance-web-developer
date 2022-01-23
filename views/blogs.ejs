@@ -1,0 +1,36 @@
+<%- include('partials/header') -%>
+
+
+<div class="container mt-5 mb-5 p-3">
+    <h1 class="display-4">Blogs</h1>
+    <p class="lead text-warning">
+        Read other's stories and share your own.
+    </p>
+    <hr />
+    <p class="text-end">
+        <% if(locals.user){%>
+            <a href="/new/posts">Write A Post <i class="fas fa-pen-fancy"></i></a>
+        <%} else {%>
+            <a href="/login">Sign In to Write A Post</a>
+        <%}%>
+    </p>
+
+    <div class="row row-cols col-md-12 mx-auto d-flex py-3 me-2">
+        <% for(var i = 0; i < blogposts.length; i++) { %>
+        <div class="card m-3 p-5">
+            <a href="/post/<%= blogposts[i]._id %>">
+                <img src="<%= blogposts[i].image %>" style="height: 300px;" class="img-fluid shadow-2-strong rounded" alt="<%= blogposts[i].title %>">
+            </a>
+
+            <p>
+                Created By <%= blogposts[i].email %>
+            </p>
+        </div>
+        <% } %>
+    </div>
+
+</div>
+
+
+<%- include('partials/footer') -%>
+<%- include('partials/scripts') -%>

@@ -1,0 +1,43 @@
+<%- include('partials/header') -%>
+
+<div class="container p-2 mt-5 mb-5">
+    <h1 class="display-3">Create A Blog</h1>
+
+    <form method="post" action="/courses/store" enctype="multipart/form-data">
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+            <input type="text" id="title" name="title" class="form-control" />
+            <label class="form-label" for="title">Title</label>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="email" id="email" name="email" class="form-control" />
+            <label class="form-label" for="email">Email address</label>
+        </div>
+
+        <!-- photo input -->
+        <div class="form-outline mb-4">
+            <label for="image" >Image</label>
+            <input type="file" id="image" name="image" class="form-control" accept="image/*" />
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="url" id="url" name="url" class="form-control" />
+            <label class="form-label" for="url">Course Url</label>
+        </div>
+
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+            <textarea class="form-control" id="description" name="description" rows="4"></textarea>
+            <label class="form-label" for="description">Description</label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+    </form>
+</div>
+
+<%- include('partials/footer') -%>
+<%- include('partials/scripts') -%>

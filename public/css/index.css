@@ -1,0 +1,56 @@
+.block {
+    background-image: linear-gradient(to bottom, #22313F, #F4F4F4);
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+}
+
+.head {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 30vh;
+    padding-top: 160px;
+    width: 100%;
+}
+
+.line {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navIcon{
+    font-size: 30px;
+    color: lightgreen;
+}
+
+.angled-css {
+    background-image: linear-gradient(176deg, #22313F 70%, #FFFFFF calc(70% + 2px));
+    padding-top: 30px;
+    width: 100%;
+    color: white;
+}
+
+.max {
+    max-height: 190px;
+}
+
+.max-img{
+    max-height: 160px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    background: url('https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8d2ViJTIwZGVzaWdufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 80vh;
+    padding-top: 160px;
+    width: 100%;
+}
