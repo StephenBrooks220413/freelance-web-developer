@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <!-- Navbar brand -->
         <a class="navbar-brand" href="/">
-            <i class="fab iconNav fa-node-js"></i>
+            <i class="fab navIcon fa-node-js"></i>
         </a>
 
         <!-- Toggle button -->
@@ -46,7 +46,6 @@
                 <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="/blogs">Blogs</a></li>
                 <li class="nav-item"><a class="nav-link" href="/courses">courses</a></li>
-                <li class="nav-item"><a class="nav-link" href="/catalog">Catalog</a></li>
                 <% if (locals.user) { %>
                     <!-- Dropdown -->
                     <li class="nav-item dropdown">
@@ -75,6 +74,11 @@
 
             <!-- Icons -->
             <ul class="navbar-nav d-flex flex-row me-1">
+                <li class="nav-item"><a class="nav-link" href="/catalog">Catalog</a></li>
+                
+                <li class="nav-item me-3 me-lg-0">
+                    <a class="nav-link" href="mailto:stephenbrooks714@gmail.com" target="_blank"><i class="far mailIcon fa-envelope"></i></a>
+                </li>
                 <li class="nav-item me-3 me-lg-0">
                     <div class="ec-cart-widget"></div>
                     <div>
@@ -82,19 +86,8 @@
                         <script type="text/javascript">Ecwid.init();</script>
                     </div>
                 </li>
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="https://github.com/StephenBrooks220413" target="_blank"><i class="fab fa-github"></i></a>
-                </li>
             </ul>
             <!-- Search -->
-            <form class="w-auto">
-                <input
-                        type="search"
-                        class="form-control"
-                        placeholder="Type query"
-                        aria-label="Search"
-                />
-            </form>
         </div>
     </div>
     <!-- Container wrapper -->

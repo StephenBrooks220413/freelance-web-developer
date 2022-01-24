@@ -26,6 +26,10 @@
     color: lightgreen;
 }
 
+.mailIcon{
+    font-size: 30px;
+}
+
 .angled-css {
     background-image: linear-gradient(176deg, #22313F 70%, #FFFFFF calc(70% + 2px));
     padding-top: 30px;
