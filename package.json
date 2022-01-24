@@ -29,5 +29,16 @@
   "devDependencies": {
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
-  }
+  },
+  "engines": {
+    "node": "16.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephenBrooks220413/freelance-web-developer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/StephenBrooks220413/freelance-web-developer/issues"
+  },
+  "homepage": "https://github.com/StephenBrooks220413/freelance-web-developer#readme"
 }
